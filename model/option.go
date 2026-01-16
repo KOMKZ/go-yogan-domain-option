@@ -11,11 +11,11 @@ type Option struct {
 	ID              uint      `gorm:"primarykey" json:"id"`
 	Key             string    `gorm:"column:key;size:100;uniqueIndex;not null" json:"key"`
 	Value           string    `gorm:"type:text;not null" json:"value"`
-	GroupType       string    `gorm:"size:50;not null;default:system;index" json:"groupType"`
-	Component       string    `gorm:"size:50" json:"component"`                     // 前端组件：input, textarea, select, switch, date-picker 等
-	ComponentParams JSONValue `gorm:"type:json" json:"componentParams"`             // 组件参数
-	CreatedAt       time.Time `gorm:"not null;index" json:"createdAt"`
-	UpdatedAt       time.Time `gorm:"not null" json:"updatedAt"`
+	GroupType       string    `gorm:"size:50;not null;default:system;index" json:"group_type"`
+	Component       string    `gorm:"size:50" json:"component"`                       // 前端组件：input, textarea, select, switch, date-picker 等
+	ComponentParams JSONValue `gorm:"type:json" json:"component_params"`              // 组件参数
+	CreatedAt       time.Time `gorm:"not null;index" json:"created_at"`
+	UpdatedAt       time.Time `gorm:"not null" json:"updated_at"`
 }
 
 // TableName 指定表名
