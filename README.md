@@ -27,7 +27,7 @@ import (
 // 初始化
 func InitOptionService(db *gorm.DB) *option.Service {
     repo := option.NewGORMRepository(db)
-    return option.NewService(repo, logger.GetLogger("option"))
+    return option.NewService(repo, logger.GetLogger("yogan"))
 }
 
 // 使用
